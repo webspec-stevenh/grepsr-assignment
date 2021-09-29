@@ -1,0 +1,1131 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Dealer Locations - Godfrey's Feed</title>
+    
+ <script>
+
+function requiredfields(form){
+ if(form.field1.value != ""){
+  form.submit();
+ }else{alert("Please enter an email.");form.field1.focus();return (false);}
+}
+</script>
+
+<!-- InstanceEndEditable -->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="menu/meanmenu.css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="anylinkmenu.css">
+<script type="text/javascript" src="menucontents.js"></script>
+<script type="text/javascript" src="anylinkmenu.js">
+
+/***********************************************
+* AnyLink JS Drop Down Menu v2.0- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/dropmenuindex.htm for full source code
+***********************************************/
+
+</script>
+
+<link media="screen" rel="stylesheet" href="colorbox/colorbox.css" />
+ <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>-->
+  <script src="colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript">
+	
+	jQuery(document).ready(function(){
+				// Zoom: Inject Javascript functions into hrefs pointing to images, one by one!
+				// Skip any href that contains a rel="nozoom" tag.
+				// This is done at page load time via an onLoad() handler.
+					var links = document.getElementsByTagName("a");
+					for (i = 0; i < links.length; i++) {
+						if (links[i].getAttribute("href")) {
+							if (links[i].getAttribute("href").search(/(.*)\.(jpg|jpeg|gif|png|bmp|tif|tiff)/gi) != -1) {
+								if (links[i].getAttribute("rel") != "nozoom") {
+									$(links[i]).attr('rel', 'example4').attr('class', 'cboxElement, example4');
+									$('.example4').colorbox({rel:'example4', slideshow:true, maxWidth:600, width:"80%", height:"auto"});
+								}
+							}
+						}
+					}
+		//$("a[rel='example4']").colorbox({slideshow:false, maxWidth:600, width:"80%", height:"auto"});
+		//$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+		
+		});
+</script>
+ <script>
+			$(document).ready(function(){
+				//$(".example4").colorbox({rel:'example4', slideshow:true, maxWidth:600, width:"80%", height:"auto"});
+			});
+	</script>
+ <!-- InstanceBeginEditable name="head" -->
+ 
+    <style>
+    a.mapsearch, a.activepage { color:#0d69b4; font-size:80%;}
+    </style>
+<!-- <script src="https://maps.google.com/maps/api/js?libraries=geometry&sensor=false"></script>-->
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyCa-8Tx6dlJEBt79ADkX0u3VJd_bFLdG3I&libraries=geometry"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&libraries=geometry"></script>-->
+<script type="text/javascript" src="google_javascript/markerclusterer.js"></script>
+<script type="text/javascript">
+var map;
+var markers = [];
+var map_distances = [];
+function initialize(){
+	    	var center = new google.maps.LatLng(33.3069978, -83.3789389);
+		var zipradius = 1000;
+		var zoom = 9;
+		switch (zipradius) {
+			case 1000: zoom = 6; break;
+			case 200: zoom = 6; break;
+			case 100: zoom = 7; break;
+			case 50: zoom = 8; break;
+		}
+		// var zoom =...
+	    map = new google.maps.Map(document.getElementById('map'), {
+    	zoom: zoom,
+    	center: center         
+    });
+	
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>American Cowboy Shop</span></strong><br><strong>513 D Murphy Hwy</strong><br><strong>Blairsville, GA</strong><br><strong>30512</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.8752421, -83.9716038);
+     	var marker_1 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_1);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:1,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(0,markers);\'>American Cowboy Shop</span></strong><br><strong>513 D Murphy Hwy</strong><br><strong>Blairsville, GA</strong><br><strong>30512</strong><br><br>"});
+		
+     	markers.push(marker_1);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Anderson&apos;s Feed and Hardware</span></strong><br><strong>88 Millies Place</strong><br><strong>Dahlonega, GA</strong><br><strong>30533</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.5533964, -83.9677289);
+     	var marker_2 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_2);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:2,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(1,markers);\'>Anderson&apos;s Feed and Hardware</span></strong><br><strong>88 Millies Place</strong><br><strong>Dahlonega, GA</strong><br><strong>30533</strong><br><br>"});
+		
+     	markers.push(marker_2);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Anderson&apos;s General Store</span></strong><br><strong>23736 US Hwy 80 E</strong><br><strong>Statesboro, GA</strong><br><strong>30458</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.4317329, -81.7492182);
+     	var marker_3 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_3);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:3,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(2,markers);\'>Anderson&apos;s General Store</span></strong><br><strong>23736 US Hwy 80 E</strong><br><strong>Statesboro, GA</strong><br><strong>30458</strong><br><br>"});
+		
+     	markers.push(marker_3);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Arabi Feed and Grain</span></strong><br><strong>1502 6th Street S</strong><br><strong>Cordele, GA</strong><br><strong>31015</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.953963, -83.780415);
+     	var marker_4 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_4);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:4,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(3,markers);\'>Arabi Feed and Grain</span></strong><br><strong>1502 6th Street S</strong><br><strong>Cordele, GA</strong><br><strong>31015</strong><br><br>"});
+		
+     	markers.push(marker_4);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Bar G Horse & Cattle Supply</span></strong><br><strong>1060 Astondale Road</strong><br><strong>Bishop, GA</strong><br><strong>30621</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.8155914, -83.4332691);
+     	var marker_5 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_5);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:5,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(4,markers);\'>Bar G Horse & Cattle Supply</span></strong><br><strong>1060 Astondale Road</strong><br><strong>Bishop, GA</strong><br><strong>30621</strong><br><br>"});
+		
+     	markers.push(marker_5);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Beggs Farm Supply</span></strong><br><strong>5845 Royston Hwy</strong><br><strong>Canon, GA</strong><br><strong>30520</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.2959968, -83.0062267);
+     	var marker_6 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_6);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:6,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(5,markers);\'>Beggs Farm Supply</span></strong><br><strong>5845 Royston Hwy</strong><br><strong>Canon, GA</strong><br><strong>30520</strong><br><br>"});
+		
+     	markers.push(marker_6);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Big Creek Feed</span></strong><br><strong>218 Hwy 49 N</strong><br><strong>Byron, GA</strong><br><strong>31025</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.6471376, -83.761952);
+     	var marker_7 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_7);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:7,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(6,markers);\'>Big Creek Feed</span></strong><br><strong>218 Hwy 49 N</strong><br><strong>Byron, GA</strong><br><strong>31025</strong><br><br>"});
+		
+     	markers.push(marker_7);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Blue Ribbon Show Supply</span></strong><br><strong>9416 Lucy Moore Road</strong><br><strong>Nichols, GA</strong><br><strong>31554</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.462497, -82.5866503);
+     	var marker_8 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_8);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:8,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(7,markers);\'>Blue Ribbon Show Supply</span></strong><br><strong>9416 Lucy Moore Road</strong><br><strong>Nichols, GA</strong><br><strong>31554</strong><br><br>"});
+		
+     	markers.push(marker_8);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Burdette Mill</span></strong><br><strong>216 Depot Street</strong><br><strong>Washington, GA</strong><br><strong>30673</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.7340136, -82.7472304);
+     	var marker_9 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_9);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:9,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(8,markers);\'>Burdette Mill</span></strong><br><strong>216 Depot Street</strong><br><strong>Washington, GA</strong><br><strong>30673</strong><br><br>"});
+		
+     	markers.push(marker_9);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Burke Feed</span></strong><br><strong>369 Hwy 56 N</strong><br><strong>Waynesboro, GA</strong><br><strong>30830</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.1230731, -81.9613739);
+     	var marker_10 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_10);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:10,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(9,markers);\'>Burke Feed</span></strong><br><strong>369 Hwy 56 N</strong><br><strong>Waynesboro, GA</strong><br><strong>30830</strong><br><br>"});
+		
+     	markers.push(marker_10);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Candler Feed and Seed</span></strong><br><strong>1275 Smokey Park Hwy</strong><br><strong>Candler, NC</strong><br><strong>28715</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(35.545987, -82.6756006);
+     	var marker_11 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_11);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:11,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(10,markers);\'>Candler Feed and Seed</span></strong><br><strong>1275 Smokey Park Hwy</strong><br><strong>Candler, NC</strong><br><strong>28715</strong><br><br>"});
+		
+     	markers.push(marker_11);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Cash & Carry Feed</span></strong><br><strong>135 N McGriff St.</strong><br><strong>Whigham, GA</strong><br><strong>39897</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(30.8847346, -84.3244161);
+     	var marker_12 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_12);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:12,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(11,markers);\'>Cash & Carry Feed</span></strong><br><strong>135 N McGriff St.</strong><br><strong>Whigham, GA</strong><br><strong>39897</strong><br><br>"});
+		
+     	markers.push(marker_12);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Cherokee Feed and Seed</span></strong><br><strong>2370 Hightower Rd</strong><br><strong>Ball Ground, GA</strong><br><strong>30107</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.2794118, -84.2958869);
+     	var marker_13 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_13);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:13,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(12,markers);\'>Cherokee Feed and Seed</span></strong><br><strong>2370 Hightower Rd</strong><br><strong>Ball Ground, GA</strong><br><strong>30107</strong><br><br>"});
+		
+     	markers.push(marker_13);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Country Oaks</span></strong><br><strong>659 Hwy. 341 S.</strong><br><strong>Barnesville, GA</strong><br><strong>30204</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.0545709, -84.1557495);
+     	var marker_14 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_14);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:14,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(13,markers);\'>Country Oaks</span></strong><br><strong>659 Hwy. 341 S.</strong><br><strong>Barnesville, GA</strong><br><strong>30204</strong><br><br>"});
+		
+     	markers.push(marker_14);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Double D Stables and Tack</span></strong><br><strong>4111 Logan Rd</strong><br><strong>Rocky Face, GA</strong><br><strong>30740</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.754724, -85.109664);
+     	var marker_15 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_15);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:15,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(14,markers);\'>Double D Stables and Tack</span></strong><br><strong>4111 Logan Rd</strong><br><strong>Rocky Face, GA</strong><br><strong>30740</strong><br><br>"});
+		
+     	markers.push(marker_15);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Dykes Creek Farm Supply</span></strong><br><strong>3387 Kingston Hwy</strong><br><strong>Rome, GA</strong><br><strong>30161</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.255091, -85.065908);
+     	var marker_16 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_16);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:16,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(15,markers);\'>Dykes Creek Farm Supply</span></strong><br><strong>3387 Kingston Hwy</strong><br><strong>Rome, GA</strong><br><strong>30161</strong><br><br>"});
+		
+     	markers.push(marker_16);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Eatonton Co-op</span></strong><br><strong>504 S Jefferson Ave</strong><br><strong>Eatonton, GA</strong><br><strong>31024</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.3211111, -83.3855556);
+     	var marker_17 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_17);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:17,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(16,markers);\'>Eatonton Co-op</span></strong><br><strong>504 S Jefferson Ave</strong><br><strong>Eatonton, GA</strong><br><strong>31024</strong><br><br>"});
+		
+     	markers.push(marker_17);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Family Feed</span></strong><br><strong>6424 Columbus Hwy 80</strong><br><strong>Box Springs, GA</strong><br><strong>31801</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.5580349, -84.6513774);
+     	var marker_18 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_18);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:18,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(17,markers);\'>Family Feed</span></strong><br><strong>6424 Columbus Hwy 80</strong><br><strong>Box Springs, GA</strong><br><strong>31801</strong><br><br>"});
+		
+     	markers.push(marker_18);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Farm & Garden Inc.</span></strong><br><strong>646 Clarksville Street</strong><br><strong>Cornelia, GA</strong><br><strong>30531</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.5188686, -83.5283984);
+     	var marker_19 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_19);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:19,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(18,markers);\'>Farm & Garden Inc.</span></strong><br><strong>646 Clarksville Street</strong><br><strong>Cornelia, GA</strong><br><strong>30531</strong><br><br>"});
+		
+     	markers.push(marker_19);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Farmer Seed Company</span></strong><br><strong>800 W Broad St</strong><br><strong>Doerun, GA</strong><br><strong>31744</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.3200993, -83.9240482);
+     	var marker_20 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_20);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:20,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(19,markers);\'>Farmer Seed Company</span></strong><br><strong>800 W Broad St</strong><br><strong>Doerun, GA</strong><br><strong>31744</strong><br><br>"});
+		
+     	markers.push(marker_20);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Farmers Feed</span></strong><br><strong>204 N West St</strong><br><strong>Greensboro, GA</strong><br><strong>30642</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.5781281, -83.1845358);
+     	var marker_21 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_21);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:21,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(20,markers);\'>Farmers Feed</span></strong><br><strong>204 N West St</strong><br><strong>Greensboro, GA</strong><br><strong>30642</strong><br><br>"});
+		
+     	markers.push(marker_21);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Feed South</span></strong><br><strong>2623 Knight Avenue</strong><br><strong>Waycross, GA</strong><br><strong>31503</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.2028754, -82.316785);
+     	var marker_22 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_22);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:22,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(21,markers);\'>Feed South</span></strong><br><strong>2623 Knight Avenue</strong><br><strong>Waycross, GA</strong><br><strong>31503</strong><br><br>"});
+		
+     	markers.push(marker_22);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Forsyth Feed & Seed</span></strong><br><strong>45 W Jefferson Street</strong><br><strong>Forsyth, GA</strong><br><strong>31029</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.0342974, -83.938242);
+     	var marker_23 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_23);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:23,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(22,markers);\'>Forsyth Feed & Seed</span></strong><br><strong>45 W Jefferson Street</strong><br><strong>Forsyth, GA</strong><br><strong>31029</strong><br><br>"});
+		
+     	markers.push(marker_23);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Georgia Deer Farm</span></strong><br><strong>850 Hwy 27 N</strong><br><strong>Roopville, GA</strong><br><strong>30170</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.4766, -85.108667);
+     	var marker_24 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_24);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:24,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(23,markers);\'>Georgia Deer Farm</span></strong><br><strong>850 Hwy 27 N</strong><br><strong>Roopville, GA</strong><br><strong>30170</strong><br><br>"});
+		
+     	markers.push(marker_24);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Gray Feed and Seed</span></strong><br><strong>107 Railroad Street</strong><br><strong>Gray, GA</strong><br><strong>31032</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.0086983, -83.5341918);
+     	var marker_25 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_25);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:25,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(24,markers);\'>Gray Feed and Seed</span></strong><br><strong>107 Railroad Street</strong><br><strong>Gray, GA</strong><br><strong>31032</strong><br><br>"});
+		
+     	markers.push(marker_25);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>H&M Trailers and Feed</span></strong><br><strong>6446 JFH Pkwy</strong><br><strong>Adairsville, GA</strong><br><strong>30103</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.3764287, -84.9316465);
+     	var marker_26 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_26);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:26,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(25,markers);\'>H&M Trailers and Feed</span></strong><br><strong>6446 JFH Pkwy</strong><br><strong>Adairsville, GA</strong><br><strong>30103</strong><br><br>"});
+		
+     	markers.push(marker_26);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Hill Farm Supply</span></strong><br><strong>12700 Augusta Hwy</strong><br><strong>Sparta, GA</strong><br><strong>31087</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.2791285, -82.9646478);
+     	var marker_27 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_27);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:27,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(26,markers);\'>Hill Farm Supply</span></strong><br><strong>12700 Augusta Hwy</strong><br><strong>Sparta, GA</strong><br><strong>31087</strong><br><br>"});
+		
+     	markers.push(marker_27);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Hills Ace Hardware</span></strong><br><strong>186 W Athens Street</strong><br><strong>Winder, GA</strong><br><strong>30680</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.9952031, -83.7346064);
+     	var marker_28 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_28);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:28,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(27,markers);\'>Hills Ace Hardware</span></strong><br><strong>186 W Athens Street</strong><br><strong>Winder, GA</strong><br><strong>30680</strong><br><br>"});
+		
+     	markers.push(marker_28);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Ijon Webb</span></strong><br><strong>1130 Stillwell Rd</strong><br><strong>Springfield, GA</strong><br><strong>31329</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.368854, -81.2695359);
+     	var marker_29 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_29);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:29,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(28,markers);\'>Ijon Webb</span></strong><br><strong>1130 Stillwell Rd</strong><br><strong>Springfield, GA</strong><br><strong>31329</strong><br><br>"});
+		
+     	markers.push(marker_29);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>J&R Feeds</span></strong><br><strong>100 8th Street NE</strong><br><strong>Cullman, AL</strong><br><strong>35055</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.1839946, -86.8472316);
+     	var marker_30 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_30);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:30,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(29,markers);\'>J&R Feeds</span></strong><br><strong>100 8th Street NE</strong><br><strong>Cullman, AL</strong><br><strong>35055</strong><br><br>"});
+		
+     	markers.push(marker_30);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Jump N Run Farm</span></strong><br><strong>1569 Liberty Church Grove Rd</strong><br><strong>Wrightsville, GA</strong><br><strong>31096</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.6484708, -82.6139806);
+     	var marker_31 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_31);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:31,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(30,markers);\'>Jump N Run Farm</span></strong><br><strong>1569 Liberty Church Grove Rd</strong><br><strong>Wrightsville, GA</strong><br><strong>31096</strong><br><br>"});
+		
+     	markers.push(marker_31);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>L & C Farm and Garden</span></strong><br><strong>1143 East Fairplay Road</strong><br><strong>Fairplay, SC</strong><br><strong>29643</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.5101355, -82.9602795);
+     	var marker_32 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_32);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:32,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(31,markers);\'>L & C Farm and Garden</span></strong><br><strong>1143 East Fairplay Road</strong><br><strong>Fairplay, SC</strong><br><strong>29643</strong><br><br>"});
+		
+     	markers.push(marker_32);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Lovin Equipment and Sales</span></strong><br><strong>756 Sweetwater Road</strong><br><strong>Robbinsville, NC</strong><br><strong>28771</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(35.323067, -83.7896389);
+     	var marker_33 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_33);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:33,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(32,markers);\'>Lovin Equipment and Sales</span></strong><br><strong>756 Sweetwater Road</strong><br><strong>Robbinsville, NC</strong><br><strong>28771</strong><br><br>"});
+		
+     	markers.push(marker_33);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Maddox Feed</span></strong><br><strong>1915 Winder Hwy</strong><br><strong>Jefferson, GA</strong><br><strong>30549</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.1001367, -83.5969643);
+     	var marker_34 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_34);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:34,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(33,markers);\'>Maddox Feed</span></strong><br><strong>1915 Winder Hwy</strong><br><strong>Jefferson, GA</strong><br><strong>30549</strong><br><br>"});
+		
+     	markers.push(marker_34);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Mini Mart</span></strong><br><strong>905 West Main Street</strong><br><strong>Swainsboro, GA</strong><br><strong>30401</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.5879284, -82.3554032);
+     	var marker_35 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_35);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:35,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(34,markers);\'>Mini Mart</span></strong><br><strong>905 West Main Street</strong><br><strong>Swainsboro, GA</strong><br><strong>30401</strong><br><br>"});
+		
+     	markers.push(marker_35);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>North Georgia Co-Op</span></strong><br><strong>951 Progress Rd</strong><br><strong>Ellijay, GA</strong><br><strong>30540</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.6739859, -84.4902667);
+     	var marker_36 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_36);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:36,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(35,markers);\'>North Georgia Co-Op</span></strong><br><strong>951 Progress Rd</strong><br><strong>Ellijay, GA</strong><br><strong>30540</strong><br><br>"});
+		
+     	markers.push(marker_36);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Owens Farm Supply</span></strong><br><strong>6414 Mize Road</strong><br><strong>Toccoa, GA</strong><br><strong>30577</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.4855944, -83.3394454);
+     	var marker_37 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_37);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:37,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(36,markers);\'>Owens Farm Supply</span></strong><br><strong>6414 Mize Road</strong><br><strong>Toccoa, GA</strong><br><strong>30577</strong><br><br>"});
+		
+     	markers.push(marker_37);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Patricks</span></strong><br><strong>10285 Covington Bypass</strong><br><strong>Covington, GA</strong><br><strong>30014</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.5729794, -83.8426437);
+     	var marker_38 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_38);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:38,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(37,markers);\'>Patricks</span></strong><br><strong>10285 Covington Bypass</strong><br><strong>Covington, GA</strong><br><strong>30014</strong><br><br>"});
+		
+     	markers.push(marker_38);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Perry Feed and Tack</span></strong><br><strong>309 Kellwood Drive</strong><br><strong>Perry, GA</strong><br><strong>31069</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.4443895, -83.7439432);
+     	var marker_39 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_39);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:39,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(38,markers);\'>Perry Feed and Tack</span></strong><br><strong>309 Kellwood Drive</strong><br><strong>Perry, GA</strong><br><strong>31069</strong><br><br>"});
+		
+     	markers.push(marker_39);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Pine Ridge Outdoor Supply</span></strong><br><strong>4999 HWY 114</strong><br><strong>Lyerly, GA</strong><br><strong>30730</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.4166444, -85.3925577);
+     	var marker_40 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_40);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:40,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(39,markers);\'>Pine Ridge Outdoor Supply</span></strong><br><strong>4999 HWY 114</strong><br><strong>Lyerly, GA</strong><br><strong>30730</strong><br><br>"});
+		
+     	markers.push(marker_40);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>PM Wilkins Company</span></strong><br><strong>117 N Charleston Street</strong><br><strong>Blacksburg, SC</strong><br><strong>29702</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(35.1183305, -81.5237833);
+     	var marker_41 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_41);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:41,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(40,markers);\'>PM Wilkins Company</span></strong><br><strong>117 N Charleston Street</strong><br><strong>Blacksburg, SC</strong><br><strong>29702</strong><br><br>"});
+		
+     	markers.push(marker_41);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Reeves Hardware</span></strong><br><strong>95 BO James St</strong><br><strong>Clayton, GA</strong><br><strong>30525</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.8689395, -83.4030572);
+     	var marker_42 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_42);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:42,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(41,markers);\'>Reeves Hardware</span></strong><br><strong>95 BO James St</strong><br><strong>Clayton, GA</strong><br><strong>30525</strong><br><br>"});
+		
+     	markers.push(marker_42);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Roberts Milling Company</span></strong><br><strong>116 West Albany Ave</strong><br><strong>Pearson, GA</strong><br><strong>31642</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.2986622, -82.8548195);
+     	var marker_43 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_43);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:43,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(42,markers);\'>Roberts Milling Company</span></strong><br><strong>116 West Albany Ave</strong><br><strong>Pearson, GA</strong><br><strong>31642</strong><br><br>"});
+		
+     	markers.push(marker_43);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Roche Farm and Garden</span></strong><br><strong>803 E Jackson St</strong><br><strong>Dublin, GA</strong><br><strong>31040</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.5444125, -82.8945945);
+     	var marker_44 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_44);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:44,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(43,markers);\'>Roche Farm and Garden</span></strong><br><strong>803 E Jackson St</strong><br><strong>Dublin, GA</strong><br><strong>31040</strong><br><br>"});
+		
+     	markers.push(marker_44);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Roche Farm and Garden</span></strong><br><strong>781 East Court Street</strong><br><strong>Wrightsville, GA</strong><br><strong>31040</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(32.7302168, -82.7117232);
+     	var marker_45 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_45);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:45,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(44,markers);\'>Roche Farm and Garden</span></strong><br><strong>781 East Court Street</strong><br><strong>Wrightsville, GA</strong><br><strong>31040</strong><br><br>"});
+		
+     	markers.push(marker_45);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Rodgers Fertilizer</span></strong><br><strong>409 N Main St</strong><br><strong>Saluda, SC</strong><br><strong>29138</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.0082425, -81.7729772);
+     	var marker_46 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_46);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:46,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(45,markers);\'>Rodgers Fertilizer</span></strong><br><strong>409 N Main St</strong><br><strong>Saluda, SC</strong><br><strong>29138</strong><br><br>"});
+		
+     	markers.push(marker_46);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Rogers Feed</span></strong><br><strong>1041 Easley Hwy</strong><br><strong>Pelzer, SC</strong><br><strong>29669</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.6639864, -82.5126743);
+     	var marker_47 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_47);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:47,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(46,markers);\'>Rogers Feed</span></strong><br><strong>1041 Easley Hwy</strong><br><strong>Pelzer, SC</strong><br><strong>29669</strong><br><br>"});
+		
+     	markers.push(marker_47);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>S&S Premix</span></strong><br><strong>654 Mary Richardson Rd</strong><br><strong>Wray, GA</strong><br><strong>31796</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.525261, -83.06603);
+     	var marker_48 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_48);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:48,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(47,markers);\'>S&S Premix</span></strong><br><strong>654 Mary Richardson Rd</strong><br><strong>Wray, GA</strong><br><strong>31796</strong><br><br>"});
+		
+     	markers.push(marker_48);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Shirley Feed & Seed Inc</span></strong><br><strong>2439 North Elm Street</strong><br><strong>Commerce, GA</strong><br><strong>30529</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.2068698, -83.4689814);
+     	var marker_49 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_49);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:49,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(48,markers);\'>Shirley Feed & Seed Inc</span></strong><br><strong>2439 North Elm Street</strong><br><strong>Commerce, GA</strong><br><strong>30529</strong><br><br>"});
+		
+     	markers.push(marker_49);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Southland Power Fence</span></strong><br><strong>752 E 5th Ave</strong><br><strong>Colbert, GA</strong><br><strong>30628</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.0412765, -83.2001394);
+     	var marker_50 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_50);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:50,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(49,markers);\'>Southland Power Fence</span></strong><br><strong>752 E 5th Ave</strong><br><strong>Colbert, GA</strong><br><strong>30628</strong><br><br>"});
+		
+     	markers.push(marker_50);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Town & Country General Store</span></strong><br><strong>59 Hwy 212 West</strong><br><strong>Monticello, GA</strong><br><strong>31064</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(33.3066615, -83.6976187);
+     	var marker_51 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_51);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:51,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(50,markers);\'>Town & Country General Store</span></strong><br><strong>59 Hwy 212 West</strong><br><strong>Monticello, GA</strong><br><strong>31064</strong><br><br>"});
+		
+     	markers.push(marker_51);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Twisted Fitterz</span></strong><br><strong>10329 Nashville Enigma Rd</strong><br><strong>Alapaha, GA</strong><br><strong>31622</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.3441663, -83.3002198);
+     	var marker_52 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_52);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:52,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(51,markers);\'>Twisted Fitterz</span></strong><br><strong>10329 Nashville Enigma Rd</strong><br><strong>Alapaha, GA</strong><br><strong>31622</strong><br><br>"});
+		
+     	markers.push(marker_52);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Wayne Feed</span></strong><br><strong>712 W Cherry Street</strong><br><strong>Jesup, GA</strong><br><strong>31545</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.6111292, -81.8896093);
+     	var marker_53 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_53);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:53,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(52,markers);\'>Wayne Feed</span></strong><br><strong>712 W Cherry Street</strong><br><strong>Jesup, GA</strong><br><strong>31545</strong><br><br>"});
+		
+     	markers.push(marker_53);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Westside Feed II</span></strong><br><strong>230 SE 7th Avenue</strong><br><strong>Lake Butler, FL</strong><br><strong>32054</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(30.02116, -82.329495);
+     	var marker_54 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_54);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:54,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(53,markers);\'>Westside Feed II</span></strong><br><strong>230 SE 7th Avenue</strong><br><strong>Lake Butler, FL</strong><br><strong>32054</strong><br><br>"});
+		
+     	markers.push(marker_54);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>White Co. Farmers Exchange</span></strong><br><strong>951 S Main St</strong><br><strong>Cleveland, GA</strong><br><strong>30528</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(34.58403, -83.760829);
+     	var marker_55 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_55);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:55,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(54,markers);\'>White Co. Farmers Exchange</span></strong><br><strong>951 S Main St</strong><br><strong>Cleveland, GA</strong><br><strong>30528</strong><br><br>"});
+		
+     	markers.push(marker_55);
+		 	var infoWindowContent = "<div style='overflow:hidden; width:200px'>";
+		infoWindowContent = infoWindowContent+ "<strong><span style='color:#e5011c;'>Woody Folsom Trailers & Feed</span></strong><br><strong>2157 Golden Isle W</strong><br><strong>Baxley, GA</strong><br><strong>31513</strong><br><br>";
+		infoWindowContent+='</div>';
+     	var infowindow = new google.maps.InfoWindow({
+     		maxWidth: 450
+     	});
+     	infowindow.setContent(infoWindowContent);
+     	var latLng = new google.maps.LatLng(31.7782514, -82.3484618);
+     	var marker_56 = new google.maps.Marker({
+     	    position: latLng
+     	});
+     	makeInfoWindowEvent(map, infowindow, marker_56);
+		map_distances.push({distance:google.maps.geometry.spherical.computeDistanceBetween(center, latLng),id:56,text:"<strong><span style='color:#e5011c;cursor:pointer;' onclick=\'myClick(55,markers);\'>Woody Folsom Trailers & Feed</span></strong><br><strong>2157 Golden Isle W</strong><br><strong>Baxley, GA</strong><br><strong>31513</strong><br><br>"});
+		
+     	markers.push(marker_56);
+		var markerCluster = new MarkerClusterer(map, markers);
+	}
+function makeInfoWindowEvent(map, infowindow, marker) {
+		google.maps.event.addListener(marker, 'click', function() {
+        	infowindow.open(map, marker);
+        });
+}
+function myClick(id,markers){
+        google.maps.event.trigger(markers[id], 'click');
+    }
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+ <!-- InstanceEndEditable -->
+</head>
+
+<body id="subpage">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="subpage-nav-container">
+<nav id="nav">
+   	  <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="menuanchorclass" rel="anylinkmenu1">About</a>
+            	<ul>
+          			<li><a href="testimonials.html">Testimonials</a></li>
+           		</ul></li>
+            <li><a href="feed.html" class="menuanchorclass" rel="anylinkmenu2">Feed</a>
+            	<ul>
+          			<li><a href="winning-program-show-feeds.html">Winning Program Show Feeds</a></li>
+                    <li><a href="beef-cattle.html">Beef Cattle</a></li>
+                    <li><a href="dairy-cattle.html">Dairy Cattle</a></li>
+                    <li><a href="deer.html">Deer</a></li>
+                    <li><a href="goat.html">Goat</a></li>
+                    <li><a href="equine.html">Equine</a></li>
+                    <li><a href="minerals.html">Supplements</a></li>
+                    <li><a href="poultry.html">Poultry</a></li>
+                    <li><a href="swine.html">Swine</a></li>
+                    <li><a href="sheep.html">Sheep</a></li>
+                    <li><a href="tubs.html">Tubs</a></li>
+                    <li><a href="winning-program-feeds.html">Show & Specialty Products</a></li>
+           		</ul></li>
+            <li><a href="expertteam.html">Team</a></li>
+            <li><a href="rewards.html">Rewards Program</a>
+            <!--<ul>
+          			<li><a href="../feed.html">Feed</a></li>
+                    <li><a href="../seedfertilizer.html">Seed and Fertilizer</a></li>
+                    <li><a href="../fencing.html">Fencing</a></li>
+   		</ul>--></li>
+            <li><a href="/blog/winners/">Winners</a></li>
+            <li><a href="dealersandlocations.php">Dealers & Locations</a></li> 
+            <!--<li><a href="../order.html">Order</a></li>-->
+            <li><a href="contactus.html">Contact</a></li>
+    </ul>
+  </nav>
+    </div>
+<div id="subpage-logo"><img src="images/graphics/Godfreys-logo-2020.png" width="320" height="249" alt=""/></div>
+<div id="main-container"><!-- InstanceBeginEditable name="content" -->
+  <div id="main">
+    <h1>Dealer Locations</h1>
+      <div style="vertical-align:top;">
+ 
+		  <table width="60%" cellpadding="3" cellspacing="0">
+			  
+	<form action="https://www.edje.com/formprocessing/processform.php" method="post" name="AnyForm">
+	<!--  This is where the form is processed. This URL will be the same in any form. -->
+
+	<input type="hidden" name="howmanyfields" value="1">
+	<!-- Just paste in the complete URL of this form here (use a complete URL not a relative path)-->
+	<!-- This is what tells the database which form this came from -->
+
+	<input type="hidden" name="destination" value="https://godfreysfeed.com/thanks-dealer.html">
+	<!-- What page will the form go to after this runs (use a complete URL not a relative path)-->
+
+	<input type="hidden" name="emailit" value="1">
+	<!-- Send an Email? 1 if yes, 0 if no  -->
+
+	<input type="hidden" name="emailaddr" value="montana@godfreysfeed.com">
+	<!-- Email address of person who will receive results - only used if emailit = 1  -->
+	<!-- To use multiple emails just separate them with commas -->
+
+	<input type="hidden" name="fieldname1" value="EM">
+	<!-- if you use a fieldname of EM (for email) that person will become the 'reply to' address in the form email -->
+	
+	<tr>
+	  <td width="37%" align="right">Interested In Becoming A Dealer?</td>
+	  <td colspan="3"><input name="field1" type="text" id="field1" placeholder="Enter email" size="38" /></td>
+	  </tr>
+		
+	</tr>
+	<tr>
+	<td align="center">&nbsp;</td>
+	<td width="20%" align="center">&nbsp;</td>
+	<td width="21%" align="center"><input type="button" onClick="requiredfields(document.AnyForm)" value="Submit"></td>
+	<td width="22%" align="center">&nbsp;</td>
+	</form>
+	</table>
+
+<br>
+<br>
+
+    
+    <div id="searchby">
+    <form action="dealersandlocations" method="post">
+      <label for="location" class="black-lg"><strong>SEARCH BY ZIPCODE:</strong></label><br>
+		      <input type="text" name="location"  value="" placeholder="enter zipcode"/><br>
+
+      <select name="zipradius" id="zipradius">
+        <option selected value="30" >30 miles</option>
+        <option value="50" >50 miles</option>
+        <option value="100" >100 miles</option>
+       <!-- <option value="200" >200  miles</option>-->
+       
+      </select><br>
+
+      <input type="button" onclick="form.submit();" value="Search" style="width:100px;display:inline-block;float:left;" />
+
+<input type="button"  onclick="window.location='dealersandlocations.php?location=31024&zipradius=1000&viewall=1'" value="View all" style="width:100px;display:inline-block;"  />      </form>
+		
+     <div style="clear:both;"></div>
+    </div>
+     
+    <div id="mapwrap">
+    	<div id="map" style="height:100%;width:100%;"></div>
+    
+
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <script>
+  $(document).ready(function() {
+	  
+		setTimeout(function() {
+			
+		}, 5000);
+ 
+	});
+
+
+  </script>
+<!-- InstanceEndEditable --></div>
+<div id="tagline-container">
+  <div id="tagline">We don't just tell you what we have - we give you what you need<br>
+    <div class="button"><a href="mailto:contact@godfreysfeed.com">Get Started</a></div>
+  </div>
+</div>
+<footer id="footer-container">
+ <a href="https://www.google.com/maps/@33.597962,-83.469599,16z?hl=en-US" target="_blank"> <div class="footer-c1"></div></a>
+  <div class="footer-c2">
+    <div class="column-wrapper">
+      <div class="footer-c2-left">Godfrey’s Warehouse<br>
+        255 Jefferson Street<br>
+        Madison, GA 30650<br>
+        <br>
+        Mailing address:<br>
+        P.O. Box 488<br>
+      Madison, GA 30650</div>
+      <div class="footer-c2-right"><a href="tel:706-342-0264">706-342-0264</a><br>
+        <a href="tel:877-629-0750">877-629-0750</a><br>
+        Fax: 706-342-0237<br>
+      <a href="mailto:contact@godfreysfeed.com">Email</a><br>
+      <br>
+      <div id="social-icon-wrapper2">
+        <div id="facebook2"><a href="https://www.facebook.com/godfreysfeed" target="_blank"><i class="fa fa-facebook"></i></a></div>
+        <div id="twitter2"><a href="https://twitter.com/godfreysfeed" target="_blank"><i class="fa fa-twitter"></i></a></div>
+        <div id="linked-in2"><a href="https://instagram.com/godfreysfeed/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+      </div>
+      </div>
+    </div>
+    <br>
+    Store hours are 8-5 Monday-Friday and 8-12 on Saturdays.<br>
+    <br>
+  We are closed on Christmas Day, New Year's Day, Memorial Day, 4th of July, Labor Day, and Thanksgiving Day.  </div>
+  <div class="footer-c3"></div>
+</footer>
+<div id="bottom-bar">WEBSITE DESIGNED BY <a href="https://edje.com" target="_blank">EDJE</a> • <a href="https://edjeshopping.com" target="_blank">EDJESHOPPING.COM</a></div>
+<script src="menu/jquery.meanmenu.js"></script> 
+<script>
+jQuery(document).ready(function () {
+    jQuery('#nav').meanmenu();
+});
+  </script>
+  
+<script type="text/javascript">  
+//anylinkmenu.init("menu_anchors_class") //call this function at the very *end* of the document!
+anylinkmenu.init("menuanchorclass")
+  </script>
+</body>
+<!-- InstanceEnd --></html>

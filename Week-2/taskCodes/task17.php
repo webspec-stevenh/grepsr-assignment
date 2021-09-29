@@ -1,0 +1,5 @@
+<?php
+    //Namespaces in PHP
+
+    
+?>

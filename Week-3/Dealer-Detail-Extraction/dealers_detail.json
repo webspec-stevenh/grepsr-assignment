@@ -1,0 +1,449 @@
+[{
+    "name": "American Cowboy Shop",
+    "address": "513 D Murphy Hwy",
+    "city": "Blairsville",
+    "state": "GA",
+    "zip": "30512",
+    "latitude": "34.8752421",
+    "longitude": "-83.9716038"
+}, {
+    "name": "Anderson's Feed and Hardware",
+    "address": "88 Millies Place",
+    "city": "Dahlonega",
+    "state": "GA",
+    "zip": "30533",
+    "latitude": "34.5533964",
+    "longitude": "-83.9677289"
+}, {
+    "name": "Anderson's General Store",
+    "address": "23736 US Hwy 80 E",
+    "city": "Statesboro",
+    "state": "GA",
+    "zip": "30458",
+    "latitude": "32.4317329",
+    "longitude": "-81.7492182"
+}, {
+    "name": "Arabi Feed and Grain",
+    "address": "1502 6th Street S",
+    "city": "Cordele",
+    "state": "GA",
+    "zip": "31015",
+    "latitude": "31.953963",
+    "longitude": "-83.780415"
+}, {
+    "name": "Bar G Horse & Cattle Supply",
+    "address": "1060 Astondale Road",
+    "city": "Bishop",
+    "state": "GA",
+    "zip": "30621",
+    "latitude": "33.8155914",
+    "longitude": "-83.4332691"
+}, {
+    "name": "Beggs Farm Supply",
+    "address": "5845 Royston Hwy",
+    "city": "Canon",
+    "state": "GA",
+    "zip": "30520",
+    "latitude": "34.2959968",
+    "longitude": "-83.0062267"
+}, {
+    "name": "Big Creek Feed",
+    "address": "218 Hwy 49 N",
+    "city": "Byron",
+    "state": "GA",
+    "zip": "31025",
+    "latitude": "32.6471376",
+    "longitude": "-83.761952"
+}, {
+    "name": "Blue Ribbon Show Supply",
+    "address": "9416 Lucy Moore Road",
+    "city": "Nichols",
+    "state": "GA",
+    "zip": "31554",
+    "latitude": "31.462497",
+    "longitude": "-82.5866503"
+}, {
+    "name": "Burdette Mill",
+    "address": "216 Depot Street",
+    "city": "Washington",
+    "state": "GA",
+    "zip": "30673",
+    "latitude": "33.7340136",
+    "longitude": "-82.7472304"
+}, {
+    "name": "Burke Feed",
+    "address": "369 Hwy 56 N",
+    "city": "Waynesboro",
+    "state": "GA",
+    "zip": "30830",
+    "latitude": "33.1230731",
+    "longitude": "-81.9613739"
+}, {
+    "name": "Candler Feed and Seed",
+    "address": "1275 Smokey Park Hwy",
+    "city": "Candler",
+    "state": "NC",
+    "zip": "28715",
+    "latitude": "35.545987",
+    "longitude": "-82.6756006"
+}, {
+    "name": "Cash & Carry Feed",
+    "address": "135 N McGriff St.",
+    "city": "Whigham",
+    "state": "GA",
+    "zip": "39897",
+    "latitude": "30.8847346",
+    "longitude": "-84.3244161"
+}, {
+    "name": "Cherokee Feed and Seed",
+    "address": "2370 Hightower Rd",
+    "city": "Ball Ground",
+    "state": "GA",
+    "zip": "30107",
+    "latitude": "34.2794118",
+    "longitude": "-84.2958869"
+}, {
+    "name": "Country Oaks",
+    "address": "659 Hwy. 341 S.",
+    "city": "Barnesville",
+    "state": "GA",
+    "zip": "30204",
+    "latitude": "33.0545709",
+    "longitude": "-84.1557495"
+}, {
+    "name": "Double D Stables and Tack",
+    "address": "4111 Logan Rd",
+    "city": "Rocky Face",
+    "state": "GA",
+    "zip": "30740",
+    "latitude": "34.754724",
+    "longitude": "-85.109664"
+}, {
+    "name": "Dykes Creek Farm Supply",
+    "address": "3387 Kingston Hwy",
+    "city": "Rome",
+    "state": "GA",
+    "zip": "30161",
+    "latitude": "34.255091",
+    "longitude": "-85.065908"
+}, {
+    "name": "Eatonton Co-op",
+    "address": "504 S Jefferson Ave",
+    "city": "Eatonton",
+    "state": "GA",
+    "zip": "31024",
+    "latitude": "33.3211111",
+    "longitude": "-83.3855556"
+}, {
+    "name": "Family Feed",
+    "address": "6424 Columbus Hwy 80",
+    "city": "Box Springs",
+    "state": "GA",
+    "zip": "31801",
+    "latitude": "32.5580349",
+    "longitude": "-84.6513774"
+}, {
+    "name": "Farm & Garden Inc.",
+    "address": "646 Clarksville Street",
+    "city": "Cornelia",
+    "state": "GA",
+    "zip": "30531",
+    "latitude": "34.5188686",
+    "longitude": "-83.5283984"
+}, {
+    "name": "Farmer Seed Company",
+    "address": "800 W Broad St",
+    "city": "Doerun",
+    "state": "GA",
+    "zip": "31744",
+    "latitude": "31.3200993",
+    "longitude": "-83.9240482"
+}, {
+    "name": "Farmers Feed",
+    "address": "204 N West St",
+    "city": "Greensboro",
+    "state": "GA",
+    "zip": "30642",
+    "latitude": "33.5781281",
+    "longitude": "-83.1845358"
+}, {
+    "name": "Feed South",
+    "address": "2623 Knight Avenue",
+    "city": "Waycross",
+    "state": "GA",
+    "zip": "31503",
+    "latitude": "31.2028754",
+    "longitude": "-82.316785"
+}, {
+    "name": "Forsyth Feed & Seed",
+    "address": "45 W Jefferson Street",
+    "city": "Forsyth",
+    "state": "GA",
+    "zip": "31029",
+    "latitude": "33.0342974",
+    "longitude": "-83.938242"
+}, {
+    "name": "Georgia Deer Farm",
+    "address": "850 Hwy 27 N",
+    "city": "Roopville",
+    "state": "GA",
+    "zip": "30170",
+    "latitude": "33.4766",
+    "longitude": "-85.108667"
+}, {
+    "name": "Gray Feed and Seed",
+    "address": "107 Railroad Street",
+    "city": "Gray",
+    "state": "GA",
+    "zip": "31032",
+    "latitude": "33.0086983",
+    "longitude": "-83.5341918"
+}, {
+    "name": "H&M Trailers and Feed",
+    "address": "6446 JFH Pkwy",
+    "city": "Adairsville",
+    "state": "GA",
+    "zip": "30103",
+    "latitude": "34.3764287",
+    "longitude": "-84.9316465"
+}, {
+    "name": "Hill Farm Supply",
+    "address": "12700 Augusta Hwy",
+    "city": "Sparta",
+    "state": "GA",
+    "zip": "31087",
+    "latitude": "33.2791285",
+    "longitude": "-82.9646478"
+}, {
+    "name": "Hills Ace Hardware",
+    "address": "186 W Athens Street",
+    "city": "Winder",
+    "state": "GA",
+    "zip": "30680",
+    "latitude": "33.9952031",
+    "longitude": "-83.7346064"
+}, {
+    "name": "Ijon Webb",
+    "address": "1130 Stillwell Rd",
+    "city": "Springfield",
+    "state": "GA",
+    "zip": "31329",
+    "latitude": "32.368854",
+    "longitude": "-81.2695359"
+}, {
+    "name": "J&R Feeds",
+    "address": "100 8th Street NE",
+    "city": "Cullman",
+    "state": "AL",
+    "zip": "35055",
+    "latitude": "34.1839946",
+    "longitude": "-86.8472316"
+}, {
+    "name": "Jump N Run Farm",
+    "address": "1569 Liberty Church Grove Rd",
+    "city": "Wrightsville",
+    "state": "GA",
+    "zip": "31096",
+    "latitude": "32.6484708",
+    "longitude": "-82.6139806"
+}, {
+    "name": "L & C Farm and Garden",
+    "address": "1143 East Fairplay Road",
+    "city": "Fairplay",
+    "state": "SC",
+    "zip": "29643",
+    "latitude": "34.5101355",
+    "longitude": "-82.9602795"
+}, {
+    "name": "Lovin Equipment and Sales",
+    "address": "756 Sweetwater Road",
+    "city": "Robbinsville",
+    "state": "NC",
+    "zip": "28771",
+    "latitude": "35.323067",
+    "longitude": "-83.7896389"
+}, {
+    "name": "Maddox Feed",
+    "address": "1915 Winder Hwy",
+    "city": "Jefferson",
+    "state": "GA",
+    "zip": "30549",
+    "latitude": "34.1001367",
+    "longitude": "-83.5969643"
+}, {
+    "name": "Mini Mart",
+    "address": "905 West Main Street",
+    "city": "Swainsboro",
+    "state": "GA",
+    "zip": "30401",
+    "latitude": "32.5879284",
+    "longitude": "-82.3554032"
+}, {
+    "name": "North Georgia Co-Op",
+    "address": "951 Progress Rd",
+    "city": "Ellijay",
+    "state": "GA",
+    "zip": "30540",
+    "latitude": "34.6739859",
+    "longitude": "-84.4902667"
+}, {
+    "name": "Owens Farm Supply",
+    "address": "6414 Mize Road",
+    "city": "Toccoa",
+    "state": "GA",
+    "zip": "30577",
+    "latitude": "34.4855944",
+    "longitude": "-83.3394454"
+}, {
+    "name": "Patricks",
+    "address": "10285 Covington Bypass",
+    "city": "Covington",
+    "state": "GA",
+    "zip": "30014",
+    "latitude": "33.5729794",
+    "longitude": "-83.8426437"
+}, {
+    "name": "Perry Feed and Tack",
+    "address": "309 Kellwood Drive",
+    "city": "Perry",
+    "state": "GA",
+    "zip": "31069",
+    "latitude": "32.4443895",
+    "longitude": "-83.7439432"
+}, {
+    "name": "Pine Ridge Outdoor Supply",
+    "address": "4999 HWY 114",
+    "city": "Lyerly",
+    "state": "GA",
+    "zip": "30730",
+    "latitude": "34.4166444",
+    "longitude": "-85.3925577"
+}, {
+    "name": "PM Wilkins Company",
+    "address": "117 N Charleston Street",
+    "city": "Blacksburg",
+    "state": "SC",
+    "zip": "29702",
+    "latitude": "35.1183305",
+    "longitude": "-81.5237833"
+}, {
+    "name": "Reeves Hardware",
+    "address": "95 BO James St",
+    "city": "Clayton",
+    "state": "GA",
+    "zip": "30525",
+    "latitude": "34.8689395",
+    "longitude": "-83.4030572"
+}, {
+    "name": "Roberts Milling Company",
+    "address": "116 West Albany Ave",
+    "city": "Pearson",
+    "state": "GA",
+    "zip": "31642",
+    "latitude": "31.2986622",
+    "longitude": "-82.8548195"
+}, {
+    "name": "Roche Farm and Garden",
+    "address": "803 E Jackson St",
+    "city": "Dublin",
+    "state": "GA",
+    "zip": "31040",
+    "latitude": "32.5444125",
+    "longitude": "-82.8945945"
+}, {
+    "name": "Roche Farm and Garden",
+    "address": "781 East Court Street",
+    "city": "Wrightsville",
+    "state": "GA",
+    "zip": "31040",
+    "latitude": "32.7302168",
+    "longitude": "-82.7117232"
+}, {
+    "name": "Rodgers Fertilizer",
+    "address": "409 N Main St",
+    "city": "Saluda",
+    "state": "SC",
+    "zip": "29138",
+    "latitude": "34.0082425",
+    "longitude": "-81.7729772"
+}, {
+    "name": "Rogers Feed",
+    "address": "1041 Easley Hwy",
+    "city": "Pelzer",
+    "state": "SC",
+    "zip": "29669",
+    "latitude": "34.6639864",
+    "longitude": "-82.5126743"
+}, {
+    "name": "S&S Premix",
+    "address": "654 Mary Richardson Rd",
+    "city": "Wray",
+    "state": "GA",
+    "zip": "31796",
+    "latitude": "31.525261",
+    "longitude": "-83.06603"
+}, {
+    "name": "Shirley Feed & Seed Inc",
+    "address": "2439 North Elm Street",
+    "city": "Commerce",
+    "state": "GA",
+    "zip": "30529",
+    "latitude": "34.2068698",
+    "longitude": "-83.4689814"
+}, {
+    "name": "Southland Power Fence",
+    "address": "752 E 5th Ave",
+    "city": "Colbert",
+    "state": "GA",
+    "zip": "30628",
+    "latitude": "34.0412765",
+    "longitude": "-83.2001394"
+}, {
+    "name": "Town & Country General Store",
+    "address": "59 Hwy 212 West",
+    "city": "Monticello",
+    "state": "GA",
+    "zip": "31064",
+    "latitude": "33.3066615",
+    "longitude": "-83.6976187"
+}, {
+    "name": "Twisted Fitterz",
+    "address": "10329 Nashville Enigma Rd",
+    "city": "Alapaha",
+    "state": "GA",
+    "zip": "31622",
+    "latitude": "31.3441663",
+    "longitude": "-83.3002198"
+}, {
+    "name": "Wayne Feed",
+    "address": "712 W Cherry Street",
+    "city": "Jesup",
+    "state": "GA",
+    "zip": "31545",
+    "latitude": "31.6111292",
+    "longitude": "-81.8896093"
+}, {
+    "name": "Westside Feed II",
+    "address": "230 SE 7th Avenue",
+    "city": "Lake Butler",
+    "state": "FL",
+    "zip": "32054",
+    "latitude": "30.02116",
+    "longitude": "-82.329495"
+}, {
+    "name": "White Co. Farmers Exchange",
+    "address": "951 S Main St",
+    "city": "Cleveland",
+    "state": "GA",
+    "zip": "30528",
+    "latitude": "34.58403",
+    "longitude": "-83.760829"
+}, {
+    "name": "Woody Folsom Trailers & Feed",
+    "address": "2157 Golden Isle W",
+    "city": "Baxley",
+    "state": "GA",
+    "zip": "31513",
+    "latitude": "31.7782514",
+    "longitude": "-82.3484618"
+}]
