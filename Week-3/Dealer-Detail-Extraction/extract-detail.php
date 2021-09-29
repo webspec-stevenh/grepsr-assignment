@@ -132,17 +132,24 @@ $zip = $zip_matches[1];
 
 //*****Latitude*****
 
-$latitude_pattern = '/LatLng\(([\d.]*),/m';
+// $latitude_pattern = '/LatLng\(([\d.]*),/m';
+// preg_match_all($latitude_pattern, $resp, $latitude_matches);
+// array_shift($latitude_matches[1]);
+
+$latitude_pattern = '/var\slatLng.{1,}LatLng\(([\d.]*)\,/m';
 preg_match_all($latitude_pattern, $resp, $latitude_matches);
-array_shift($latitude_matches[1]);
 $latitude = $latitude_matches[1];
 // print_r($latitude_matches[1]);
 // die;
 
 //*****Longitude*****
-$longitude_pattern = '/LatLng\([\d.]*\,\s([-\d.]*)\);/m';
+
+// $longitude_pattern = '/LatLng\([\d.]*\,\s([-\d.]*)\);/m';
+// preg_match_all($longitude_pattern, $resp, $longitude_matches);
+// array_shift($longitude_matches[1]);
+
+$longitude_pattern = '/var\slatLng.{1,}LatLng\([\d.]*\,\s([-\d.]*)\)/m';
 preg_match_all($longitude_pattern, $resp, $longitude_matches);
-array_shift($longitude_matches[1]);
 $longitude = $longitude_matches[1];
 // print_r($longitude_matches[1]);
 // die;
